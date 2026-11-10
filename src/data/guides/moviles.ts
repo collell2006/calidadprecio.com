@@ -1,0 +1,117 @@
+import type { Guide } from '../../types/guide';
+
+export const movilesGuide: Guide = {
+  slug: 'mejores-moviles-calidad-precio',
+  title: 'Los 3 Mejores Móviles Calidad-Precio de 2026 (Menos de 300 €)',
+  metaDescription: '¿Qué teléfono móvil comprar por menos de 300 euros? Analizamos pantalla AMOLED 120Hz, cámara de 50MP con OIS, batería y años de soporte Android.',
+  category: 'moviles',
+  categoryName: 'Móviles y Tablets',
+  lastUpdated: '10 de Noviembre, 2026',
+  readingTime: '5 min',
+  intro: 'Gastar más de 1.000 € en un smartphone es innecesario para el 95% de la población. La gama media actual ofrece pantallas AMOLED de 120 Hz, cámaras solventes de día y noche y baterías que duran dos jornadas completas sin despeinarse.',
+  verdictTitle: 'El Veredicto Rápido de CalidadPrecio.com',
+  verdictText: 'El rey indiscutible de la relación calidad-precio por debajo de los 260 € es el Xiaomi Redmi Note 13 Pro 4G/5G o el POCO X6 Pro si buscas potencia extrema para juegos. Si prefieres un software limpio y actualizaciones garantizadas, el Samsung Galaxy A35 es la apuesta segura.',
+  quickTable: [
+    {
+      name: 'Xiaomi Redmi Note 13 Pro',
+      badge: '👑 Rey Calidad-Precio Global',
+      image: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400&auto=format&fit=crop&q=80',
+      keyFeature: 'AMOLED 120Hz • Cámara 200MP OIS • 67W',
+      specPill: 'Superventas',
+      priceEstimate: '~249 €',
+      linkAnchor: '#redmi-note-13-pro',
+      isWinner: true,
+    },
+    {
+      name: 'POCO X6 Pro 5G',
+      badge: '⚡ Mejor en Potencia Bruta',
+      image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&auto=format&fit=crop&q=80',
+      keyFeature: 'Dimensity 8300 Ultra • 120Hz AMOLED • 512GB',
+      specPill: 'Rendimiento Top',
+      priceEstimate: '~289 €',
+      linkAnchor: '#poco-x6-pro',
+    },
+    {
+      name: 'Samsung Galaxy A35 5G',
+      badge: '🛡️ Mejor en Soporte y Cámara',
+      image: 'https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=400&auto=format&fit=crop&q=80',
+      keyFeature: 'Super AMOLED 120Hz • 4 años de Android • IP67',
+      specPill: 'Soporte 4 Años',
+      priceEstimate: '~279 €',
+      linkAnchor: '#samsung-a35',
+    },
+  ],
+  products: [
+    {
+      id: 'redmi-note-13-pro',
+      rankNumber: 1,
+      badge: '🏆 La Elección Calidad-Precio (Recomendación #1)',
+      badgeColor: 'emerald',
+      score: 9.7,
+      name: 'Xiaomi Redmi Note 13 Pro (8GB RAM / 256GB)',
+      brand: 'Xiaomi',
+      image: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=700&auto=format&fit=crop&q=80',
+      specs: ['Pantalla AMOLED 1.5K a 120 Hz', 'Sensor de 200 MP con estabilización óptica (OIS)', 'Carga rápida 67W (cargador incluido)', 'Batería 5000 mAh'],
+      whyBestValue: 'Tiene una pantalla que compite directamente con móviles de 700 € y su cámara principal de 200 MP con estabilización óptica saca fotos nítidas sin temblores incluso de noche, algo casi inédito por 240 €.',
+      targetUser: 'Cualquiera que busque la mejor pantalla, diseño y cámara en el rango de los 200-260 euros.',
+      pros: [
+        'Brillo de pantalla espectacular (hasta 1800 nits)',
+        'Cámara de 200 MP muy solvente con estabilización óptica OIS',
+        'Carga al 100% en apenas 40 minutos',
+      ],
+      cons: [
+        'Viene con algunas aplicaciones preinstaladas (bloatware) que hay que desinstalar',
+        'La cámara gran angular de 8MP es modesta en situaciones de poca luz',
+      ],
+      offers: [
+        { name: 'Amazon', price: '249,00 €', url: 'https://www.amazon.es', highlight: true },
+        { name: 'PcComponentes', price: '244,99 €', url: 'https://www.pccomponentes.com' },
+        { name: 'MediaMarkt', price: '259,00 €', url: 'https://www.mediamarkt.es' },
+      ],
+    },
+    {
+      id: 'poco-x6-pro',
+      rankNumber: 2,
+      badge: '⚡ Mejor Potencia para Juegos (< 300 €)',
+      badgeColor: 'amber',
+      score: 9.4,
+      name: 'POCO X6 Pro 5G (Dimensity 8300 Ultra)',
+      brand: 'POCO',
+      image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=700&auto=format&fit=crop&q=80',
+      specs: ['Procesador Dimensity 8300-Ultra (gama alta)', 'Memoria UFS 4.0 ultrarrápida', 'AMOLED 120Hz CrystalRes', '67W Turbo Charge'],
+      whyBestValue: 'Su procesador rinde como los procesadores de los teléfonos de 900 € de hace solo dos años. Es el móvil más rápido y fluido del mercado por menos de 300 €.',
+      targetUser: 'Gente joven, gamers móviles o usuarios que quieran un teléfono que no sufra ralentizaciones en 4 años.',
+      pros: [
+        'Potencia descomunal (más de 1.3 millones en AnTuTu)',
+        'Bordes de pantalla casi inexistentes',
+        'Almacenamiento de 256GB o 512GB a precio de derribo',
+      ],
+      cons: [
+        'Construcción de plástico en los laterales',
+        'Cámaras secundarias muy básicas',
+      ],
+      offers: [
+        { name: 'Amazon', price: '289,00 €', url: 'https://www.amazon.es', highlight: true },
+        { name: 'PcComponentes', price: '285,00 €', url: 'https://www.pccomponentes.com' },
+      ],
+    },
+  ],
+  buyerTips: [
+    {
+      icon: '📸',
+      title: '1. Exige OIS (Estabilizador Óptico) en la cámara',
+      description: 'Los megapíxeles solos no sirven de nada si la lente se mueve. El OIS estabiliza físicamente la lente para que las fotos nocturnas y los vídeos no salgan borrosos.',
+    },
+    {
+      icon: '🔋',
+      title: '2. Carga rápida vs batería',
+      description: 'Una batería estándar de 5000 mAh te da día y medio. Con carga rápida de 67W, en 15 minutos de enchufe tienes el 50% de batería.',
+    },
+  ],
+  faqs: [
+    {
+      question: '¿Cuántos años de actualizaciones dura un móvil de gama media?',
+      answer: 'Actualmente marcas como Samsung ofrecen 4 años de actualizaciones de Android, mientras que Xiaomi/POCO ofrecen entre 3 y 4 años de parches de seguridad.',
+    },
+  ],
+};

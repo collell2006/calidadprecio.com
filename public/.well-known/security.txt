@@ -1,0 +1,6 @@
+# Archivo de Seguridad según estándar RFC 9116
+Contact: mailto:seguridad@calidadprecio.com
+Expires: 2027-11-10T10:00:00.000Z
+Preferred-Languages: es, en
+Canonical: https://calidadprecio.com/.well-known/security.txt
+Policy: https://calidadprecio.com/legal/privacidad

@@ -1,0 +1,54 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout
+  title="Política de Cookies | CalidadPrecio.com"
+  description="Información clara sobre las cookies técnicas y de afiliación utilizadas en CalidadPrecio.com."
+>
+  <Header />
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="prose prose-slate max-w-none">
+      <h1 class="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight mb-4">
+        Política de Cookies
+      </h1>
+      <p class="text-sm text-slate-500 mb-8 border-b border-slate-200 pb-4">
+        Última actualización: Noviembre 2026 • En cumplimiento con el art. 22.2 de la LSSI-CE.
+      </p>
+
+      <div class="space-y-6 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <h2 class="text-xl font-bold text-slate-900 mt-8 mb-2">1. ¿Qué son las cookies?</h2>
+        <p>
+          Una cookie es un pequeño archivo que se almacena en tu navegador cuando visitas determinadas páginas web. Su función es recordar tus preferencias y permitir que los servicios funcionen correctamente.
+        </p>
+
+        <h2 class="text-xl font-bold text-slate-900 mt-8 mb-2">2. Cookies que utilizamos en este sitio</h2>
+        <div class="space-y-4">
+          <div class="bg-white p-4 rounded-xl border border-slate-200">
+            <h3 class="font-extrabold text-sm text-slate-900 mb-1">A) Cookies Técnicas y Estrictamente Necesarias</h3>
+            <p class="text-xs text-slate-600">
+              Permiten la navegación básica por la web, el funcionamiento del menú desplegable y la carga rápida de estilos de seguridad. No recopilan información personal identificable.
+            </p>
+          </div>
+
+          <div class="bg-white p-4 rounded-xl border border-slate-200">
+            <h3 class="font-extrabold text-sm text-slate-900 mb-1">B) Cookies de Afiliación (Comercios Externos)</h3>
+            <p class="text-xs text-slate-600">
+              Cuando haces clic en un enlace de compra a Amazon, PcComponentes o MediaMarkt, esa tienda puede depositar una cookie técnica en tu navegador para saber que vienes referenciado desde nuestra web si decides realizar una compra. Estas cookies son gestionadas bajo la política de privacidad de cada comercio de destino.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-xl font-bold text-slate-900 mt-8 mb-2">3. Cómo desactivar o eliminar cookies</h2>
+        <p>
+          Puedes permitir, bloquear o eliminar las cookies instaladas en tu equipo mediante la configuración de las opciones del navegador que utilices (Chrome, Firefox, Safari, Edge).
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

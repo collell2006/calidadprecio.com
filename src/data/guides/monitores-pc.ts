@@ -1,0 +1,117 @@
+import type { Guide } from '../../types/guide';
+
+export const monitoresGuide: Guide = {
+  slug: 'mejores-monitores-pc-calidad-precio',
+  title: 'Los 4 Mejores Monitores PC Calidad-Precio de 2026: Para Trabajar y Jugar',
+  metaDescription: '¿Qué monitor comprar sin arruinarte? Analizamos paneles IPS, 144Hz-180Hz, resolución 2K y conectividad USB-C en Amazon y PcComponentes.',
+  category: 'hardware',
+  categoryName: 'Hardware de PC',
+  lastUpdated: '10 de Noviembre, 2026',
+  readingTime: '5 min',
+  intro: 'Comprar un monitor hoy en día puede ser un dolor de cabeza entre siglas (IPS, VA, OLED, Hz, HDR). Hemos seleccionado las mejores pantallas de 24 y 27 pulgadas que ofrecen colores reales, alta fluidez y ergonomía sin tener que pagar 500 €.',
+  verdictTitle: 'El Veredicto Rápido de CalidadPrecio.com',
+  verdictText: 'Para la gran mayoría de usuarios, el punto dulce en 2026 son las 27 pulgadas en resolución 2K (1440p) con panel IPS y más de 144 Hz. El AOC Q27G2S/EU o el LG UltraGear 27GN800P por menos de 220 € son las compras más equilibradas.',
+  quickTable: [
+    {
+      name: 'LG UltraGear 27GN800P-B',
+      badge: '👑 Rey Calidad-Precio 2K',
+      image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&auto=format&fit=crop&q=80',
+      keyFeature: '27" • 2K QHD (2560x1440) • IPS 144Hz',
+      specPill: 'IPS 1ms',
+      priceEstimate: '~219 €',
+      linkAnchor: '#lg-ultragear-27',
+      isWinner: true,
+    },
+    {
+      name: 'KOORUI 24E3',
+      badge: '🥈 Mejor Menos de 120€',
+      image: 'https://images.unsplash.com/photo-1547082299-de196ea013d6?w=400&auto=format&fit=crop&q=80',
+      keyFeature: '24" • Full HD • IPS 165Hz',
+      specPill: 'Super Chollo',
+      priceEstimate: '~115 €',
+      linkAnchor: '#koorui-24e3',
+    },
+    {
+      name: 'Dell S2722QC (USB-C)',
+      badge: '💼 Mejor para Teletrabajo / Mac',
+      image: 'https://images.unsplash.com/photo-1586210579191-33b45e38fa2c?w=400&auto=format&fit=crop&q=80',
+      keyFeature: '27" • 4K UHD • USB-C 65W Carga',
+      specPill: '4K Profesional',
+      priceEstimate: '~329 €',
+      linkAnchor: '#dell-s2722qc',
+    },
+  ],
+  products: [
+    {
+      id: 'lg-ultragear-27',
+      rankNumber: 1,
+      badge: '🏆 La Elección Calidad-Precio (Recomendación #1)',
+      badgeColor: 'emerald',
+      score: 9.7,
+      name: 'LG UltraGear 27GN800P-B (27" 2K IPS 144Hz)',
+      brand: 'LG',
+      image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=700&auto=format&fit=crop&q=80',
+      specs: ['27 pulgadas', 'Resolución 2K QHD (2560 x 1440)', 'Panel IPS con 99% sRGB', '144 Hz y 1ms GtG', 'Compatible con G-Sync y FreeSync'],
+      whyBestValue: 'Ofrece el equilibrio perfecto: nitidez 2K (mucho más espacio de trabajo que un 1080p), colores precisos IPS para edición y 144Hz para juegos, todo por poco más de 200 € con la fiabilidad de panel de LG.',
+      targetUser: 'Usuarios que alternan teletrabajo/estudio durante el día y ocio/gaming por la noche en un único monitor.',
+      pros: [
+        'Excelente calibración de color de fábrica (IPS 99% sRGB)',
+        'Respuesta instantánea de 1ms sin efecto fantasma (ghosting)',
+        'Resolución 2K en 27": densidad de píxeles perfecta para texto nítido',
+      ],
+      cons: [
+        'La peana original solo permite inclinación (se recomienda soporte VESA)',
+        'El contraste en salas completamente a oscuras es el típico de los IPS (negros grisáceos)',
+      ],
+      offers: [
+        { name: 'PcComponentes', price: '219,00 €', url: 'https://www.pccomponentes.com', highlight: true },
+        { name: 'Amazon', price: '224,99 €', url: 'https://www.amazon.es' },
+        { name: 'MediaMarkt', price: '229,00 €', url: 'https://www.mediamarkt.es' },
+      ],
+    },
+    {
+      id: 'koorui-24e3',
+      rankNumber: 2,
+      badge: '🥈 Mejor Opción Económica (< 120 €)',
+      badgeColor: 'amber',
+      score: 9.0,
+      name: 'KOORUI 24E3 (24" Full HD IPS 165Hz)',
+      brand: 'KOORUI (Grupo HKC)',
+      image: 'https://images.unsplash.com/photo-1547082299-de196ea013d6?w=700&auto=format&fit=crop&q=80',
+      specs: ['23.8 pulgadas', 'Full HD 1080p', 'Panel IPS 165 Hz', 'Bordes ultrafinos'],
+      whyBestValue: 'Por poco más de 100 €, KOORUI (fabricante directo de paneles) ha revolucionado la gama de entrada ofreciendo IPS a 165 Hz donde antes solo había paneles TN descoloridos.',
+      targetUser: 'Presupuestos ajustados, estudiantes o segundo monitor vertical.',
+      pros: [
+        'Precio imbatible con panel IPS de calidad',
+        '165 Hz de refresco muy fluidos',
+        'Diseño limpio sin estética estridente',
+      ],
+      cons: [
+        'Resolución 1080p (adecuada para 24", pero no para más grande)',
+        'Altavoces integrados no incluidos',
+      ],
+      offers: [
+        { name: 'Amazon', price: '115,99 €', url: 'https://www.amazon.es', highlight: true },
+        { name: 'PcComponentes', price: '119,00 €', url: 'https://www.pccomponentes.com' },
+      ],
+    },
+  ],
+  buyerTips: [
+    {
+      icon: '📐',
+      title: '1. Tamaño vs. Resolución',
+      description: 'En 24 pulgadas, 1080p se ve nítido. En 27 pulgadas, 1080p empieza a pixelarse; la resolución obligatoria para 27" es 2K QHD (1440p).',
+    },
+    {
+      icon: '🎨',
+      title: '2. Panel IPS vs VA',
+      description: 'IPS ofrece los mejores ángulos de visión y colores naturales para trabajar. VA ofrece negros más profundos pero suele tener desenfoque de movimiento en transiciones rápidas.',
+    },
+  ],
+  faqs: [
+    {
+      question: '¿Se nota la diferencia de 60Hz a 144Hz para trabajar?',
+      answer: 'Sí. El movimiento del ratón y el scroll de textos largos o documentos Excel es infinitamente más suave, reduciendo la fatiga ocular a lo largo de 8 horas de jornada laboral.',
+    },
+  ],
+};

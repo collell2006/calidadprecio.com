@@ -1,0 +1,42 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout
+  title="Aviso Legal y Condiciones de Uso | CalidadPrecio.com"
+  description="Aviso legal, titularidad del sitio y condiciones de uso de CalidadPrecio.com."
+>
+  <Header />
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="prose prose-slate max-w-none">
+      <h1 class="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight mb-4">
+        Aviso Legal
+      </h1>
+      <p class="text-sm text-slate-500 mb-8 border-b border-slate-200 pb-4">
+        En cumplimiento con el artículo 10 de la Ley 34/2002 de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSI-CE).
+      </p>
+
+      <div class="space-y-6 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <h2 class="text-xl font-bold text-slate-900 mt-8 mb-2">1. Datos Identificativos</h2>
+        <p>
+          El titular del dominio web <strong>calidadprecio.com</strong> es el equipo editor de CalidadPrecio. Correo electrónico de contacto: <a href="mailto:contacto@calidadprecio.com" class="text-emerald-600 font-semibold hover:underline">contacto@calidadprecio.com</a>.
+        </p>
+
+        <h2 class="text-xl font-bold text-slate-900 mt-8 mb-2">2. Objeto y Contenido</h2>
+        <p>
+          La finalidad del sitio web es informativa, editorial y de análisis comparativo de productos de consumo. Toda la información técnica y de precios se proporciona de buena fe, pero los precios y disponibilidad en las tiendas finales pueden fluctuar con rapidez. El usuario debe verificar las condiciones finales en el comercio antes de formalizar la compra.
+        </p>
+
+        <h2 class="text-xl font-bold text-slate-900 mt-8 mb-2">3. Propiedad Intelectual</h2>
+        <p>
+          Los textos, análisis, comparativas y diseño gráfico de este sitio web están protegidos por las leyes de propiedad intelectual. Las marcas comerciales, logotipos e imágenes de productos pertenecen a sus respectivos fabricantes o titulares.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

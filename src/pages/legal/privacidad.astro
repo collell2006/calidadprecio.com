@@ -1,0 +1,63 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout
+  title="Política de Privacidad y Protección de Datos | CalidadPrecio.com"
+  description="Compromiso de privacidad, no recopilación de datos bancarios y cumplimiento con el RGPD y la LOPD-GDD."
+>
+  <Header />
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="prose prose-slate max-w-none">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-emerald-100 text-emerald-800 mb-4">
+        <span>🛡️</span> Cero Fugas de Datos • Arquitectura Segura
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight mb-4">
+        Política de Privacidad y Seguridad de la Información
+      </h1>
+      <p class="text-sm text-slate-500 mb-8 border-b border-slate-200 pb-4">
+        Última actualización: Noviembre 2026 • En cumplimiento con el RGPD (UE 2016/679) y la LOPDGDD 3/2018.
+      </p>
+
+      <div class="space-y-6 text-slate-700 leading-relaxed text-sm sm:text-base">
+        <h2 class="text-xl font-bold text-slate-900 mt-8 mb-2">1. Arquitectura "Privacidad por Diseño" (Privacy by Design)</h2>
+        <p>
+          En <strong>CalidadPrecio.com</strong> aplicamos el principio de minimización de datos. Nuestra plataforma funciona sobre una arquitectura estática sin bases de datos públicas accesibles por internet.
+        </p>
+        <div class="bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-r-xl my-4">
+          <ul class="space-y-1 text-xs sm:text-sm text-emerald-950 font-medium">
+            <li>✓ <strong>NO almacenamos tarjetas de crédito ni datos de pago.</strong></li>
+            <li>✓ <strong>NO creamos cuentas de usuario con contraseñas que puedan ser filtradas.</strong></li>
+            <li>✓ <strong>NO vendemos ni cedemos datos personales a terceros.</strong></li>
+          </ul>
+        </div>
+
+        <h2 class="text-xl font-bold text-slate-900 mt-8 mb-2">2. Proceso de Compra Seguro en Comercios Oficiales</h2>
+        <p>
+          Cuando pulsas sobre un botón de compra ("Ver en Amazon", "Ver en PcComponentes", "Ver en MediaMarkt"), la transacción final se realiza exclusivamente en los servidores cifrados (SSL/TLS con certificación bancaria PCI-DSS) de dichas tiendas oficiales. En ningún momento CalidadPrecio.com tiene acceso a tus datos de facturación o envío.
+        </p>
+
+        <h2 class="text-xl font-bold text-slate-900 mt-8 mb-2">3. Medidas Técnicas de Ciberseguridad</h2>
+        <p>
+          Implementamos cabeceras de seguridad activas en todos nuestros servidores:
+        </p>
+        <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm text-slate-600">
+          <li><strong>HSTS (Strict-Transport-Security):</strong> Obliga a todas las conexiones a utilizar cifrado HTTPS de 256 bits, imposibilitando ataques de intermediario (Man-in-the-Middle).</li>
+          <li><strong>Content Security Policy (CSP):</strong> Bloquea la inyección de código malicioso externo (Cross-Site Scripting - XSS).</li>
+          <li><strong>Anti-Clickjacking (X-Frame-Options: DENY):</strong> Impide que cibercriminales incrusten nuestra web en marcos transparentes para engañar a los visitantes.</li>
+          <li><strong>Aislamiento de Ventanas (noopener noreferrer):</strong> Protege tu navegador de ataques de tabnabbing cuando abres enlaces externos.</li>
+        </ul>
+
+        <h2 class="text-xl font-bold text-slate-900 mt-8 mb-2">4. Ejercicio de Derechos (ARCO)</h2>
+        <p>
+          Cualquier usuario puede ejercer sus derechos de acceso, rectificación, supresión o limitación contactando directamente a nuestro responsable de privacidad: <a href="mailto:privacidad@calidadprecio.com" class="text-emerald-600 font-semibold hover:underline">privacidad@calidadprecio.com</a>.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

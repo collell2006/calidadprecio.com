@@ -1,0 +1,26 @@
+# Cabeceras de Ciberseguridad Globales para Cloudflare Pages y Netlify
+/*
+  # 1. HSTS (Fuerza HTTPS estricto durante 2 años e incluye subdominios)
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+
+  # 2. Anti-Clickjacking (Impide que la web sea incrustada en iframes ocultos para engañar a los usuarios)
+  X-Frame-Options: DENY
+
+  # 3. Anti-MIME Sniffing (Evita que el navegador ejecute archivos con tipos MIME incorrectos)
+  X-Content-Type-Options: nosniff
+
+  # 4. Política de Referrer (Evita fuga de parámetros de búsqueda privados pero mantiene el dominio para afiliados)
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # 5. Permissions-Policy (Desactiva acceso a hardware como cámara, micro, ubicación y FLoC)
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+
+  # 6. Aislamiento de Origen (Cross-Origin Protections contra ataques Spectre y fuga de ventanas)
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+
+  # 7. Content Security Policy (CSP - Restringe qué dominios pueden ejecutar scripts, estilos e imágenes)
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com https://m.media-amazon.com https://cdn.pccomponentes.com https://thumb.pccomponentes.com https://assets.mmsrg.com; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;
+
+  # 8. Control de Caché para archivos HTML (Evita que versiones antiguas con scripts queden cacheadas indebidamente)
+  Cache-Control: public, max-age=0, must-revalidate

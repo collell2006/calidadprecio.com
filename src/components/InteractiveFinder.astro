@@ -1,0 +1,155 @@
+---
+---
+
+<div class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden my-10">
+  <div class="absolute -right-10 -bottom-10 w-60 h-60 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="relative z-10 max-w-2xl">
+    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 mb-3">
+      <span>⚡</span> Asistente Interactivo Rápido
+    </div>
+    <h3 class="text-2xl sm:text-3xl font-black tracking-tight text-white">
+      ¿Qué lavadora necesitas exactamente?
+    </h3>
+    <p class="text-slate-300 text-sm mt-1 mb-6">
+      Elige tu presupuesto y cuántos sois en casa para ver la opción calidad-precio que te conviene hoy.
+    </p>
+
+    <!-- Filtros interactivos -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div>
+        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
+          1. ¿Cuántos vivís en casa?
+        </label>
+        <select
+          id="finder-people"
+          class="w-full bg-slate-800/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer"
+        >
+          <option value="1-2">1 o 2 personas (7 a 8 kg)</option>
+          <option value="3-4" selected>Familia 3 a 4 personas (8 a 9 kg)</option>
+          <option value="5+">5 o más personas (10 kg o más)</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
+          2. Presupuesto aproximado
+        </label>
+        <select
+          id="finder-budget"
+          class="w-full bg-slate-800/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer"
+        >
+          <option value="low">Menos de 330 € (Ahorro máximo)</option>
+          <option value="mid" selected>Entre 350 € y 450 € (Punto dulce)</option>
+          <option value="high">Más de 480 € (Premium accesible)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Resultado dinámico -->
+    <div id="finder-result" class="mt-6 p-4 sm:p-5 rounded-2xl bg-slate-800/80 border border-slate-700/80 flex flex-col sm:flex-row items-center justify-between gap-4 transition-all">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-black text-xl shrink-0">
+          ✓
+        </div>
+        <div>
+          <span class="text-xs uppercase tracking-wider font-extrabold text-emerald-400 block" id="result-badge">
+            Tu mejor opción para 3-4 personas:
+          </span>
+          <h4 class="text-base sm:text-lg font-black text-white" id="result-title">
+            Balay 3TS976BA (9 kg, Motor Inverter, Clase A)
+          </h4>
+          <p class="text-xs text-slate-300 mt-0.5" id="result-desc">
+            Alrededor de 379 € en PcComponentes y Amazon.
+          </p>
+        </div>
+      </div>
+
+      <a
+        id="result-link"
+        href="#balay-3ts976ba"
+        class="w-full sm:w-auto px-5 py-2.5 rounded-xl text-xs font-bold bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition-colors text-center shrink-0 shadow-lg shadow-emerald-500/20"
+      >
+        Ver análisis y precios →
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const peopleSelect = document.getElementById('finder-people') as HTMLSelectElement;
+  const budgetSelect = document.getElementById('finder-budget') as HTMLSelectElement;
+  const resultTitle = document.getElementById('result-title');
+  const resultBadge = document.getElementById('result-badge');
+  const resultDesc = document.getElementById('result-desc');
+  const resultLink = document.getElementById('result-link') as HTMLAnchorElement;
+
+  const recommendations: Record<string, { title: string; badge: string; desc: string; link: string }> = {
+    '1-2_low': {
+      title: 'Beko WTE 7611 B (7 kg, 1200 rpm)',
+      badge: 'Tu mejor opción económica para 1-2 personas:',
+      desc: 'La más vendida por debajo de los 280 €. Muy compacta y fiable.',
+      link: '#beko-wte7611',
+    },
+    '1-2_mid': {
+      title: 'Samsung Serie 4 WW80T4040EE (8 kg, EcoBubble)',
+      badge: 'Tu punto dulce para 1-2 personas:',
+      desc: 'Alrededor de 349 €. Excelente lavado en frío con burbujas activas.',
+      link: '#samsung-ww80',
+    },
+    '1-2_high': {
+      title: 'Bosch Serie 4 WAN28286ES (8 kg, Silenciosa)',
+      badge: 'Premium duradera para 1-2 personas:',
+      desc: 'Alrededor de 490 €. Muy silenciosa con motor EcoSilence 10 años.',
+      link: '#bosch-wan28286',
+    },
+    '3-4_low': {
+      title: 'Cecotec Bolero DressCode 8500 (8.5 kg, Inverter)',
+      badge: 'Máximo ahorro para 3-4 personas:',
+      desc: 'Ronda los 319 €. Gran capacidad a precio imbatible de marca nacional.',
+      link: '#cecotec-bolero',
+    },
+    '3-4_mid': {
+      title: 'Balay 3TS976BA (9 kg, Motor Inverter, Clase A)',
+      badge: '👑 El Rey Calidad-Precio para 3-4 personas:',
+      desc: 'Ronda los 379 € - 399 €. Motor ultrasilencioso, repuestos garantizados y clase A.',
+      link: '#balay-3ts976ba',
+    },
+    '3-4_high': {
+      title: 'LG Serie 5 F4WR5009A0W (9 kg, Inteligencia Artificial AI DD)',
+      badge: 'Tecnología prémium para 3-4 personas:',
+      desc: 'Alrededor de 489 €. Detecta el tipo de tejido y protege tu ropa.',
+      link: '#lg-f4wr5009',
+    },
+    '5+_low': {
+      title: 'Candy RapidÓ RO14104DWMST (10 kg, Vapor)',
+      badge: 'Gran capacidad económica para familias:',
+      desc: 'Ronda los 360 € con 10 kg de carga y programas de 14 minutos.',
+      link: '#candy-rapido',
+    },
+    '5+_mid': {
+      title: 'Hisense WFQY1014EVJM (10.5 kg, Motor Inverter)',
+      badge: 'Punto dulce para familias de 5+:',
+      desc: 'Gran tambor de 10.5 kg por menos de 420 €. Tratamiento antibacterias.',
+      link: '#hisense-10kg',
+    },
+    '5+_high': {
+      title: 'Haier I-Pro Series 7 (10 kg, Motor Direct Motion)',
+      badge: 'Tope de gama familiar accesible:',
+      desc: 'Alrededor de 540 €. Motor acoplado directo al tambor sin correa, casi inaudible.',
+      link: '#haier-ipro7',
+    },
+  };
+
+  function updateRecommendation() {
+    const key = `${peopleSelect.value}_${budgetSelect.value}`;
+    const rec = recommendations[key] || recommendations['3-4_mid'];
+    if (resultTitle) resultTitle.textContent = rec.title;
+    if (resultBadge) resultBadge.textContent = rec.badge;
+    if (resultDesc) resultDesc.textContent = rec.desc;
+    if (resultLink) resultLink.href = rec.link;
+  }
+
+  peopleSelect?.addEventListener('change', updateRecommendation);
+  budgetSelect?.addEventListener('change', updateRecommendation);
+</script>
